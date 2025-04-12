@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express'
 
 const app = express();
 
@@ -10,15 +10,9 @@ app.get('/',(req,res)=>{
 })
 
 
-app.get('/ecomerce',(req,res)=>{
-    res.send('ecomerce')
-})
 
+const port = process.env.PORT || 4000
 
-app.get('/test',(req,res)=>{
-    res.send('test')
-})
-
-app.listen(4000,()=>{
-    console.log('servidor iniciado')
+app.listen(port,()=>{
+    console.log(`servidor iniciado en el puerto ${port}`)
 })
